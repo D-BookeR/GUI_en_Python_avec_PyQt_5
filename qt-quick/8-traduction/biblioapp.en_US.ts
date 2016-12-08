@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE TS>
+<TS version="2.1" language="en_US" sourcelanguage="fr_BE">
+<context>
+    <name>main</name>
+    <message>
+        <source>&amp;Fichier</source>
+        <translation>&amp;File</translation>
+    </message>
+    <message>
+        <source>Quitter</source>
+        <translation>Quit</translation>
+    </message>
+    <message>
+        <source>Titre</source>
+        <translation>Title</translation>
+    </message>
+    <message>
+        <source>Auteur</source>
+        <translation>Author</translation>
+    </message>
+    <message>
+        <source>Éditeur</source>
+        <translation>Publisher</translation>
+    </message>
+    <message>
+        <source>Publication</source>
+        <translation>Publication</translation>
+    </message>
+    <message>
+        <source>Prix</source>
+        <translation>Price</translation>
+    </message>
+    <message>
+        <source>Détails</source>
+        <translation>Details</translation>
+    </message>
+    <message>
+        <source>Genre</source>
+        <translation>Genre</translation>
+    </message>
+    <message>
+        <source>Année de publication</source>
+        <translation>Publication year</translation>
+    </message>
+    <message>
+        <source>Résumé</source>
+        <translation>Summary</translation>
+    </message>
+    <message>
+        <source>Nouveau</source>
+        <translation>New</translation>
+    </message>
+    <message>
+        <source>Sauvegarder</source>
+        <translation>Save</translation>
+    </message>
+    <message>
+        <source>Supprimer</source>
+        <translation>Delete</translation>
+    </message>
+</context>
+</TS>
