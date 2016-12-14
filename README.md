@@ -36,9 +36,9 @@ qmlviewer main.qml
 ### Problèmes ?
 Si l'application ne démarre pas, 
 
-1. vérifiez que Python est bien installé et accessible dans le PATH
-2. vérifiez que vous lancez la bonne version de Python (si vous en avez plusieurs installées) via la commande
+* vérifiez que Python est bien installé et accessible dans le PATH
+* vérifiez que vous lancez la bonne version de Python (si vous en avez plusieurs installées) via la commande
 ```
 python -V
 ```
-3. vérifiez que PyQt est bien installé pour la bonne version de Python (si vous en avez plusieurs installées)
+* vérifiez que PyQt est bien installé pour la bonne version de Python (si vous en avez plusieurs installées)
