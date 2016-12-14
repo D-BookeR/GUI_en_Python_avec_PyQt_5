@@ -18,7 +18,7 @@ Les exemples sont organisés en répertoires pour chacun des module du livre (qt
 Pour pouvoir exécuter ces applications d'exemple, il est nécessaire d'avoir installé [Python 3.5](https://www.python.org/downloads/release/python-350/) (ou supérieur) et [PyQt5](https://www.riverbankcomputing.com/software/pyqt/intro).
 Pour plus d'informations, référez-vous à la section 1.4 du livre.
 
-### Lancement d'une application via console
+### Lancement d'une application via la console
 #### Applications Qt-Widget
 1. placez-vous dans le répertoire feuille
 2. exécutez la commande
@@ -35,6 +35,7 @@ qmlviewer main.qml
 
 ### Problèmes ?
 Si l'application ne démarre pas, 
+
 1. vérifiez que Python est bien installé et accessible dans le PATH
 2. vérifiez que vous lancez la bonne version de Python (si vous en avez plusieurs installées) via la commande
 ```
