@@ -1,4 +1,4 @@
-## Créer des applications graphiques en Python avec PyQt 5
+## Créer des applications graphiques en Python avec PyQt5
 Ce dépôt contient les codes sources des exemples du livre [Créer des applications graphiques en Python avec PyQt 5](http://www.d-booker.fr/qt-python/376-creer-des-applications-graphiques-en-python-avec-pyqt.html), prochainement disponible en [version bêta](http://www.d-booker.fr/content/48-version-beta).
 
 
