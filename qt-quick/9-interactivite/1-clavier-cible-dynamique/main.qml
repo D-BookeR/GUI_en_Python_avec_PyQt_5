@@ -17,8 +17,8 @@ ApplicationWindow {
                 font.pointSize: 20
 
                 Keys.onPressed: {
-                    console.log("[" + modelData + "] Touche : " + event.key)
-                    event.accepted = true
+                    console.log("[" + modelData + "] Touche : " + event.key); 
+                    event.accepted = true; 
                 }
 
                 MouseArea {

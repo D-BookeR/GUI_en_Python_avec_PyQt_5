@@ -11,7 +11,7 @@ ApplicationWindow {
         MouseArea {
             anchors.fill: parent
             onClicked: {
-                console.log("User clicked at: " + mouse.x + ", " + mouse.y)
+                console.log("User clicked at: " + mouse.x + ", " + mouse.y); 
             }
         }
     }

@@ -98,8 +98,8 @@ ApplicationWindow {
         anchors.fill: parent
         onClicked: {
             switch (state) {
-                case "allowed": state = "disallowed"; break
-                case "disallowed": state = "allowed"; break
+                case "allowed": state = "disallowed"; break; 
+                case "disallowed": state = "allowed"; break; 
             }
         }
 
@@ -115,7 +115,7 @@ ApplicationWindow {
                 PropertyChanges { target: red1; state: "blinking" }
             }
         ]
+        
+        state: "allowed"
     }
-
-    Component.onCompleted: click.state = "allowed"
 }

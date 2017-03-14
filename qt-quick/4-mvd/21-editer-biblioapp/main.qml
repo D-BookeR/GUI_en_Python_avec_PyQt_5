@@ -195,7 +195,7 @@ ApplicationWindow {
                         if (booksList.currentRow >= 0) { // Update current item.
                             bookModel.set(booksList.currentRow, contents);
                         } else { // Create an item.
-                            bookModel.append(contents)
+                            bookModel.append(contents); 
                         }
                     }
                 }
@@ -204,7 +204,7 @@ ApplicationWindow {
                     enabled: booksList.currentRow >= 0
                     onClicked:
                         if (booksList.currentRow >= 0)
-                            bookModel.remove(booksList.currentRow)
+                            bookModel.remove(booksList.currentRow); 
                 }
             }
         }

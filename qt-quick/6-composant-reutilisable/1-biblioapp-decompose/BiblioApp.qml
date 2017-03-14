@@ -6,7 +6,6 @@ import "db.js" as Db
 
 ApplicationWindow {
     id: window
-    property var db
 
     menuBar: MenuBar {
         Menu {
@@ -35,7 +34,7 @@ ApplicationWindow {
                 model: bookModel
                 onRowCountChanged: {
                    selection.clear();
-                   selection.select(rowCount-1);
+                   selection.select(rowCount - 1);
                 }
 
                 TableViewColumn {

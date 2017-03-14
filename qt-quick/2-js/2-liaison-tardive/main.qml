@@ -59,6 +59,6 @@ ApplicationWindow {
         anchors.topMargin: 10
         anchors.horizontalCenter: text.horizontalCenter
 
-        onClicked: text.color = Qt.binding(function() { return colourField.text })
+        onClicked: text.color = Qt.binding(function() { return colourField.text; })
     }
 }

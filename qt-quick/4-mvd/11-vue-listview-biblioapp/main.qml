@@ -55,13 +55,13 @@ ApplicationWindow {
                 delegate: Button {
                     text: title + ", " + author
                     onClicked: {
-                        dTitle.text = title
-                        dAuthor.text = author
-                        dGenre.text = genre
-                        dPublisher.text = publisher
-                        dYear.text = year
-                        dSummary.text = summary
-                        dPrice.text = price
+                        dTitle.text = title; 
+                        dAuthor.text = author; 
+                        dGenre.text = genre; 
+                        dPublisher.text = publisher; 
+                        dYear.text = year; 
+                        dSummary.text = summary;
+                        dPrice.text = price; 
                     }
                 }
             }

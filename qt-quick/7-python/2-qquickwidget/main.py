@@ -2,7 +2,6 @@ import sys
 
 from PyQt5.QtCore import QUrl
 from PyQt5.QtWidgets import QApplication
-from PyQt5.QtQml import QQmlApplicationEngine
 from PyQt5.QtQuickWidgets import QQuickWidget
 
 

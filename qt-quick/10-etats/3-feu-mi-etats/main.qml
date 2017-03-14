@@ -60,8 +60,8 @@ ApplicationWindow {
         anchors.fill: parent
         onClicked: {
             switch (state) {
-                case "allowed": state = "disallowed"; break
-                case "disallowed": state = "allowed"; break
+                case "allowed": state = "disallowed"; break; 
+                case "disallowed": state = "allowed"; break; 
             }
         }
 
@@ -76,9 +76,7 @@ ApplicationWindow {
                     interval: 800
                     repeat: true
                     running: true
-                    onTriggered: {
-                        white.color = Qt.colorEqual(white.color, "white") ? "black" : "white"
-                    }
+                    onTriggered: white.color = Qt.colorEqual(white.color, "white") ? "black" : "white"
                 }
             },
             State {
@@ -92,13 +90,13 @@ ApplicationWindow {
                     repeat: true
                     running: true
                     onTriggered: {
-                        red2.color = Qt.colorEqual(red1.color, "red") ? "red" : "black"
-                        red1.color = Qt.colorEqual(red1.color, "red") ? "black" : "red"
+                        red2.color = Qt.colorEqual(red1.color, "red") ? "red" : "black"; 
+                        red1.color = Qt.colorEqual(red1.color, "red") ? "black" : "red"; 
                     }
                 }
             }
         ]
-    }
 
-    Component.onCompleted: click.state = "allowed"
+        state: "allowed"
+    }
 }
