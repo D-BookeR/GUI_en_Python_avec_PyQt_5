@@ -1,0 +1,13 @@
+*.bak
+Thumbs.db
+*~
+*.log
+msvc9/
+*.o
+*.obj
+*.exe
+*.pro.user*
+*.qmlproject.user*
+*.txt.user
+*.autosave
+*.directory
