@@ -10,7 +10,7 @@ import sys
 
 app = QApplication(sys.argv)
 
-# definition de la scène
+# definition de la scÃ¨ne
 scene = QGraphicsScene()
 rectGris = QGraphicsRectItem(0.,0.,200.,150.)
 rectGris.setBrush(QBrush(Qt.lightGray))
@@ -18,7 +18,7 @@ scene.addItem(rectGris)
 # ou (equivalent):
 # rectGris = scene.addRect(0.,0.,200.,150.,brush=QBrush(Qt.lightGray))
 
-texte = QGraphicsTextItem("Tous en scène !")
+texte = QGraphicsTextItem("Tous en scÃ¨ne !")
 dy = rectGris.rect().height() - texte.sceneBoundingRect().height()
 texte.setPos(rectGris.x(), rectGris.y() + dy)
 texte.setDefaultTextColor(Qt.blue)
