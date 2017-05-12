@@ -145,12 +145,13 @@ ApplicationWindow {
                     onClicked: {
                         var contents = {title: fieldTitle.text, author: fieldAuthor.text,
                             genre: fieldGenre.currentText, publisher: fieldPublisher.text,
-                            year: fieldYear.text, summary: fieldSummary.text, price: fieldPrice.text};
-                        if (booksList.currentRow >= 0) { // Update current item.
-                            bookModel.set(booksList.currentRow, contents);
-                        } else { // Create an item.
-                            bookModel.append(contents);
-                        }
+                            year: fieldYear.value, summary: fieldSummary.text, price: fieldPrice.text};
+                        var index = (booksList.currentRow >= 0) ? booksList.currentRow : bookModel.count; // Update current item or create one. 
+                        ['title', 'author', 'genre', 'publisher', 'year', 'summary', 'price'].forEach(
+                            function(role) {
+                                bookModel.setProperty(booksList.currentRow, role, contents[role]);
+                            }
+                        );
                     }
                 }
                 Button {

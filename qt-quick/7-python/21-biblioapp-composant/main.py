@@ -133,6 +133,7 @@ class FileDictListModel(QAbstractListModel):
         QAbstractListModel.__init__(self, parent, *args) 
         self._data = data
         self._roles = None
+        self._roles_name_to_int = None
         self._file = None
         self._just_created = False
         
@@ -153,6 +154,7 @@ class FileDictListModel(QAbstractListModel):
             content = json.load(f)
             self._data = content[0]
             self._roles = {int(k): v.encode('utf-8') for k, v in content[1].items()}
+            self._roles_name_to_int = {v: k for k, v in self._roles.items()}
         return True
  
     def rowCount(self, parent=QModelIndex()): 
@@ -174,6 +176,7 @@ class FileDictListModel(QAbstractListModel):
         
         if self._roles is None: 
             self._roles = dict(zip(range(Qt.UserRole + 1, Qt.UserRole + 1 + len(decoded_value)), [v.encode('utf-8') for v in decoded_value.keys()]))
+            self._roles_name_to_int = {v: k for k, v in self._roles.items()}
         
         self.dataChanged.emit(index, index, self._roles.keys())
         self._file_write()
@@ -236,7 +239,18 @@ class FileDictListModel(QAbstractListModel):
     def get(self, index, role_name): 
         if self._file is None: 
             return None
-        return self._data[index][role_name]
+        return str(self._data[index][role_name])
+        
+    @pyqtSlot(int, str, str)
+    @pyqtSlot(int, str, int)
+    @pyqtSlot(int, str, float)
+    def setProperty(self, index, role_name, value): 
+        if self._file is not None: 
+            if index == len(self._data): 
+                self._data.append({})
+            self._data[index][role_name] = value
+            self._file_write()
+            self.dataChanged.emit(self.index(int(index)), self.index(int(index)), [self._roles_name_to_int[role_name.encode('utf-8')]])
         
     @pyqtProperty(str)
     def file(self):
