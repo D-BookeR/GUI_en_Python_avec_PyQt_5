@@ -146,10 +146,10 @@ ApplicationWindow {
                         var contents = {title: fieldTitle.text, author: fieldAuthor.text,
                             genre: fieldGenre.currentText, publisher: fieldPublisher.text,
                             year: fieldYear.value, summary: fieldSummary.text, price: fieldPrice.text};
-                        var index = (booksList.currentRow >= 0) ? booksList.currentRow : bookModel.count; // Update current item or create one. 
-                        ['title', 'author', 'genre', 'publisher', 'year', 'summary', 'price'].forEach(
+                        var index = (booksList.currentRow >= 0) ? booksList.currentRow : bookModel.count; // Update current item (booksList.currentRow >= 0) or create one (booksList.currentRow == -1). 
+                        Object.keys(contents).forEach(
                             function(role) {
-                                bookModel.setProperty(booksList.currentRow, role, contents[role]);
+                                bookModel.setProperty(index, role, contents[role]);
                             }
                         );
                     }
@@ -165,3 +165,6 @@ ApplicationWindow {
         }
     }
 }
+
+
+                    

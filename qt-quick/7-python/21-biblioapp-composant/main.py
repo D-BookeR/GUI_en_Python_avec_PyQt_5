@@ -246,11 +246,17 @@ class FileDictListModel(QAbstractListModel):
     @pyqtSlot(int, str, float)
     def setProperty(self, index, role_name, value): 
         if self._file is not None: 
+            append = False
             if index == len(self._data): 
                 self._data.append({})
+                append = True
+
             self._data[index][role_name] = value
             self._file_write()
-            self.dataChanged.emit(self.index(int(index)), self.index(int(index)), [self._roles_name_to_int[role_name.encode('utf-8')]])
+            if not append: 
+                self.dataChanged.emit(self.index(int(index)), self.index(int(index)), [self._roles_name_to_int[role_name.encode('utf-8')]])
+            else: 
+                self.rowsInserted.emit(QModelIndex(), index, index)
         
     @pyqtProperty(str)
     def file(self):
